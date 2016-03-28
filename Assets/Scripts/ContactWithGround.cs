@@ -13,7 +13,8 @@ public class ContactWithGround : MonoBehaviour {
         {
             other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
-
+            GameObject background = GameObject.FindWithTag("Background");
+            background.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
         }
     }
 }
