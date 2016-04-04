@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class snowSpawnController : MonoBehaviour {
+public class hazardSpawnController : MonoBehaviour {
 
     public GameObject hazard;
     public Vector2 spawnValues;
@@ -27,8 +27,8 @@ public class snowSpawnController : MonoBehaviour {
         {
             Quaternion spawnRotation = Quaternion.identity;
             Vector2 spawnPosition = new Vector2((Random.Range(-spawnValues.x, spawnValues.x)), spawnValues.y);
-            GameObject snowflake = (GameObject)Instantiate(hazard, spawnPosition, spawnRotation);
-            snowflake.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(minHorizontalSpeed, maxHorizontalSpeed), Random.Range(minVerticalSpeed, maxVerticalSpeed));
+            GameObject environmentalHazard = (GameObject)Instantiate(hazard, spawnPosition, spawnRotation);
+            environmentalHazard.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(minHorizontalSpeed, maxHorizontalSpeed), Random.Range(minVerticalSpeed, maxVerticalSpeed));
             yield return new WaitForSeconds(spawnWait);
         }
     }
