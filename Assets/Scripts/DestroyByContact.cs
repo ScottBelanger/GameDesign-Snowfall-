@@ -18,11 +18,20 @@ public class DestroyByContact : MonoBehaviour
     {
         if (other.tag == "Snowflake")
         {
-            Debug.Log("Hit");
             Destroy(other.gameObject);
             transform.localScale += new Vector3(0.1F, 0.1F, 0);
             score = score + 10;
             text.text = "Score: " + score;
+        }
+        if (other.tag == "Raindrop")
+        {
+            Destroy(other.gameObject);
+            
+        }
+        if (other.tag == "Hail")
+        {
+            Destroy(other.gameObject);
+
         }
     }
 }
