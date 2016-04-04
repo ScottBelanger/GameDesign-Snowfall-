@@ -556,9 +556,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141459577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38dc85cc70289d1468a6d6c0be865263, type: 3}
+  m_Script: {fileID: 11500000, guid: 053426c75148a414882bf09b491a1015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hazard: {fileID: 111642, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
+  spawnValues: {x: 6, y: 11}
+  hazardCount: 15
+  spawnWait: 1
+  startWait: 1
+  minHorizontalSpeed: 0
+  maxHorizontalSpeed: -1
+  minVerticalSpeed: -1
+  maxVerticalSpeed: -1
 --- !u!4 &1141459579
 Transform:
   m_ObjectHideFlags: 0
