@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{BC1AF704-9A98-A8CF-90D7-2E95E39A274B}") = "GameDesign-Snowfall-", "Assembly-CSharp.csproj", "{6889811B-C015-4045-AAAC-4FC39A8264B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6889811B-C015-4045-AAAC-4FC39A8264B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6889811B-C015-4045-AAAC-4FC39A8264B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6889811B-C015-4045-AAAC-4FC39A8264B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6889811B-C015-4045-AAAC-4FC39A8264B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
