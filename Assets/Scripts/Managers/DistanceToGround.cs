@@ -21,12 +21,12 @@ public class DistanceToGround : MonoBehaviour
         GameObject Snowflake = GameObject.FindWithTag("Player");
         GameObject Ground = GameObject.FindWithTag("Ground");
         distance = (Snowflake.transform.position.y-Snowflake.GetComponent<Renderer>().bounds.size.y/2) - (Ground.transform.position.y+Ground.GetComponent<Renderer>().bounds.size.y/2);
-        distance = (float)(Math.Truncate((double)distance * 100.0) / 100.0);
+        distance = (float)(Math.Truncate((double)distance));
 
         if(distance < 0 )
         {
             distance = 0;
         }
-        text.text = "Ground: " + distance;
+        text.text = "Ground: " + distance + "ft";
     }
 }
