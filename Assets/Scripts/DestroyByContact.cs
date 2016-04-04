@@ -26,13 +26,43 @@ public class DestroyByContact : MonoBehaviour
         if (other.tag == "Raindrop")
         {
             Destroy(other.gameObject);
-            
+            StartCoroutine(fallFaster());
+
         }
         if (other.tag == "Hail")
         {
             Destroy(other.gameObject);
 
         }
+    }
+
+    IEnumerator fallFaster()
+    {
+        GameObject ground = GameObject.FindWithTag("Ground");
+        float groundHorizantalSpeed = ground.GetComponent<Rigidbody2D>().velocity.y;
+        ground.GetComponent<Rigidbody2D>().velocity = new Vector2(0, groundHorizantalSpeed + 3);
+
+        GameObject background = GameObject.FindWithTag("Background");
+        float backgroundHorizantalSpeed = ground.GetComponent<Rigidbody2D>().velocity.y;
+        background.GetComponent<Rigidbody2D>().velocity = new Vector2(0, backgroundHorizantalSpeed + 3);
+
+        /*GameObject[] snowflakes = GameObject.FindGameObjectsWithTag("Snowflake");
+        foreach(GameObject snowflake in snowflakes)
+        {
+            float snowflakeHorizantalSpeed = snowflake.GetComponent<Rigidbody2D>().velocity.y;
+            snowflake.GetComponent<Rigidbody2D>().velocity = new Vector2(0, snowflakeHorizantalSpeed + 3);
+        }
+
+        GameObject[] raindrops = GameObject.FindGameObjectsWithTag("Raindrop");
+        foreach (GameObject raindrop in raindrops)
+        {
+            float raindropHorizantalSpeed = raindrop.GetComponent<Rigidbody2D>().velocity.y;
+            raindrop.GetComponent<Rigidbody2D>().velocity = new Vector2(0, raindropHorizantalSpeed + 3);
+        }*/
+
+        yield return new WaitForSeconds(1);
+        ground.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1); //1 is hardcoded. For now...
+        background.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1); ; //1 is hardcoded. For now...
     }
 
     public static float getScore()
