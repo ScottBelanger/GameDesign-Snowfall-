@@ -8,7 +8,7 @@ public class ContactWithGround : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         level2 = false;
-        if (other.tag == "Snowflake")
+        if (other.tag != "Player")
         {
             Destroy(other.gameObject);
         }

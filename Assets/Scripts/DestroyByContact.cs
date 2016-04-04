@@ -23,6 +23,16 @@ public class DestroyByContact : MonoBehaviour
             score = score + 10;
             text.text = "Score: " + score;
         }
+        if (other.tag == "Raindrop")
+        {
+            Destroy(other.gameObject);
+            
+        }
+        if (other.tag == "Hail")
+        {
+            Destroy(other.gameObject);
+
+        }
     }
 
     public static float getScore()

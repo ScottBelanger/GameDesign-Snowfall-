@@ -72,11 +72,12 @@
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\DestroyByContact.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Managers\DistanceToGround.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\SideSwitcher.cs" />
-    <Compile Include="Assets\Scripts\snowSpawnController.cs" />
+    <Compile Include="Assets\Scripts\hazardSpawnController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

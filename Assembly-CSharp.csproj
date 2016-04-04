@@ -57,7 +57,7 @@
      <Compile Include="Assets\Scripts\Scene Switchers\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\Scene Switchers\optionMenuSwitch.cs" />
      <Compile Include="Assets\Scripts\SideSwitcher.cs" />
-     <Compile Include="Assets\Scripts\snowSpawnController.cs" />
+     <Compile Include="Assets\Scripts\hazardSpawnController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
