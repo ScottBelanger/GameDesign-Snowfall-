@@ -50,9 +50,12 @@
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Managers\DistanceToGround.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\checkLevels.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
+     <Compile Include="Assets\Scripts\Scene Switchers\SceneSwitcher.cs" />
+     <Compile Include="Assets\Scripts\Scene Switchers\optionMenuSwitch.cs" />
      <Compile Include="Assets\Scripts\SideSwitcher.cs" />
      <Compile Include="Assets\Scripts\snowSpawnController.cs" />
  <Reference Include="UnityEngine.UI">

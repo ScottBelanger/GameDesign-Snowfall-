@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class DistanceToGround : MonoBehaviour
 {
@@ -19,7 +20,13 @@ public class DistanceToGround : MonoBehaviour
     {
         GameObject Snowflake = GameObject.FindWithTag("Player");
         GameObject Ground = GameObject.FindWithTag("Ground");
-        distance = Vector3.Distance(Snowflake.transform.position, Ground.transform.position);
+        distance = (Snowflake.transform.position.y-Snowflake.GetComponent<Renderer>().bounds.size.y/2) - (Ground.transform.position.y+Ground.GetComponent<Renderer>().bounds.size.y/2);
+        distance = (float)(Math.Truncate((double)distance * 100.0) / 100.0);
+
+        if(distance < 0 )
+        {
+            distance = 0;
+        }
         text.text = "Ground: " + distance;
     }
 }
