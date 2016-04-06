@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class checkLevels : MonoBehaviour {
 
+    GameObject level2Icon;
 	void Update () {
+
+        level2Icon = GameObject.FindGameObjectWithTag("Level2Toggle");
 
         if(ContactWithGround.getLevel2())
         {
-            GameObject level2 = GameObject.FindGameObjectWithTag("Level2Toggle");
-            //level2.GetComponent<Renderer>().material="#77FF29FF";
+            level2Icon.GetComponent<Image>().color = Color.green;
         }
         
 	}
