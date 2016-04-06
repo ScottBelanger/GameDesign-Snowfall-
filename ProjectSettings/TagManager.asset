@@ -10,6 +10,9 @@ TagManager:
   - Distance
   - scoreText
   - Level2Toggle
+  - Raindrop
+  - Hail
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

@@ -52,6 +52,8 @@
      <Compile Include="Assets\Scripts\Managers\DistanceToGround.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\checkLevels.cs" />
+     <Compile Include="Assets\Scripts\Managers\pauseMenuManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\pauseScript.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Scene Switchers\SceneSwitcher.cs" />

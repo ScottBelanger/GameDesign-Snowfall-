@@ -15,3 +15,7 @@ EditorBuildSettings:
     path: Assets/_scenes/Level1-1.unity
   - enabled: 1
     path: Assets/_scenes/optionMenu.unity
+  - enabled: 1
+    path: Assets/_scenes/Level1-2.unity
+  - enabled: 1
+    path: Assets/_scenes/PauseMenu.unity
