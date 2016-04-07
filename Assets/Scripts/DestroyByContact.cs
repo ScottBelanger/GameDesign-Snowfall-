@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class DestroyByContact : MonoBehaviour
 {
+    public GameObject snowflake;
 
     public static float score;
     Text text;
@@ -31,17 +32,28 @@ public class DestroyByContact : MonoBehaviour
         }
         if (other.tag == "Hail")
         {
-            score = score - 50;
             Destroy(other.gameObject);
             for (int i=0; i<5; i++)
             {
-                if (score >= 0)
+                if (score <= 0)
                 {
                     break;
                 }
+                score = score - 10;
                 transform.localScale -= new Vector3(0.1F, 0.1F, 0);
+                Quaternion spawnRotation = Quaternion.identity;
+                Vector2 spawnPosition = new Vector2(transform.localPosition.x, transform.localPosition.y + 1);
+                GameObject environmentalHazard = (GameObject)Instantiate(snowflake, spawnPosition, spawnRotation);
+                environmentalHazard.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2, 2), Random.Range(1, 3));
+                StartCoroutine(releaseSnow(environmentalHazard));
             }
         }
+    }
+
+    IEnumerator releaseSnow(GameObject environmentalHazard)
+    {
+        yield return new WaitForSeconds(1.5f);
+        environmentalHazard.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-0.5f, 3), Random.Range(-2, -3));
     }
 
     IEnumerator fallFaster()
