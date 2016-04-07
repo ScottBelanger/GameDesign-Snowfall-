@@ -4,6 +4,7 @@ using System.Collections;
 public class ContactWithGround : MonoBehaviour {
 
     public static bool level2;
+    public static bool groundContact = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,6 +15,7 @@ public class ContactWithGround : MonoBehaviour {
         }
         if (other.tag == "Player")
         {
+            groundContact = true;
             other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             GameObject background = GameObject.FindWithTag("Background");
@@ -22,7 +24,7 @@ public class ContactWithGround : MonoBehaviour {
             if(DestroyByContact.getScore() >= 100)
             {
                 level2 = true;
-                Application.LoadLevel("WorldOneSelectionScreen");
+                //Application.LoadLevel("WorldOneSelectionScreen");
             }
         }
     }
@@ -30,5 +32,15 @@ public class ContactWithGround : MonoBehaviour {
     public static bool getLevel2()
     {
         return level2;
+    }
+
+    public static bool getgroundContact()
+    {
+        return groundContact;
+    }
+
+    public static void setgroundContact(bool val)
+    {
+        groundContact = val;
     }
 }
