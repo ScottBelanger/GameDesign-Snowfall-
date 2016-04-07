@@ -13,6 +13,7 @@ TagManager:
   - Raindrop
   - Hail
   - PauseMenu
+  - Wind
   layers:
   - Default
   - TransparentFX
