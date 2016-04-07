@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472480, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 111642, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
       propertyPath: m_TagString

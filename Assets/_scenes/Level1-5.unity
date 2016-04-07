@@ -461,7 +461,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 985595856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -60, z: 0}
+  m_LocalPosition: {x: 0, y: -101, z: 0}
   m_LocalScale: {x: 24, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac41e71cafa12347ad69f2685507f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowflake: {fileID: 0}
+  snowflake: {fileID: 111642, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
 --- !u!1 &1141459577
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +544,9 @@ GameObject:
   - 4: {fileID: 1141459579}
   - 114: {fileID: 1141459578}
   - 114: {fileID: 1141459580}
-  - 82: {fileID: 1141459581}
+  - 114: {fileID: 1141459581}
+  - 114: {fileID: 1141459583}
+  - 82: {fileID: 1141459582}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: GameController
@@ -565,13 +567,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 111642, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
   spawnValues: {x: 6, y: 11}
-  hazardCount: 50
+  hazardCount: 100
   spawnWait: 1
   startWait: 1
   minHorizontalSpeed: 1
   maxHorizontalSpeed: -1
-  minVerticalSpeed: -1
-  maxVerticalSpeed: -2
+  minVerticalSpeed: -2
+  maxVerticalSpeed: -4
 --- !u!4 &1141459579
 Transform:
   m_ObjectHideFlags: 0
@@ -595,16 +597,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053426c75148a414882bf09b491a1015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 142296, guid: 2a78e6897d35b1f4d98258520d29cd55, type: 2}
+  hazard: {fileID: 100762, guid: 58914e71f58834443b57d3670214da02, type: 2}
   spawnValues: {x: 6, y: 11}
-  hazardCount: 100
-  spawnWait: .5
+  hazardCount: 150
+  spawnWait: 1
   startWait: 2
-  minHorizontalSpeed: -.5
+  minHorizontalSpeed: -2
   maxHorizontalSpeed: .5
   minVerticalSpeed: -6
   maxVerticalSpeed: -6
---- !u!82 &1141459581
+--- !u!114 &1141459581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141459577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053426c75148a414882bf09b491a1015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazard: {fileID: 142296, guid: 2a78e6897d35b1f4d98258520d29cd55, type: 2}
+  spawnValues: {x: 6, y: 11}
+  hazardCount: 150
+  spawnWait: 1
+  startWait: 1
+  minHorizontalSpeed: -3
+  maxHorizontalSpeed: 1
+  minVerticalSpeed: -8
+  maxVerticalSpeed: -10
+--- !u!82 &1141459582
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -613,11 +635,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b89b10adac971548b639dbcd37081d7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2568348df1651284b87001d459916f59, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -674,6 +696,26 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1141459583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141459577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053426c75148a414882bf09b491a1015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazard: {fileID: 196570, guid: ef3dc1c327864b9479963ae521dce618, type: 2}
+  spawnValues: {x: 6, y: -11}
+  hazardCount: 30
+  spawnWait: 10
+  startWait: 10
+  minHorizontalSpeed: 0
+  maxHorizontalSpeed: 0
+  minVerticalSpeed: 2
+  maxVerticalSpeed: 2
 --- !u!1 &1153456246
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +915,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 635ceb7ee57e55b4bb7de8076da93423, type: 2}
+  - {fileID: 2100000, guid: 03e56e3ea8baade43a1ec60bd41c85aa, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -901,8 +943,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1762037414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -22.2999992, z: 10}
-  m_LocalScale: {x: 15, y: 71.7300034, z: 1}
+  m_LocalPosition: {x: 0, y: -43.4000015, z: 10}
+  m_LocalScale: {x: 15, y: 110.599998, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

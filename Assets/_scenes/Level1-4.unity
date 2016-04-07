@@ -154,11 +154,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472480, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 111642, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 21251970, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a2c853cf1aaec73488cc394dd6f4ebf7,
+        type: 3}
+    - target: {fileID: 472480, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883012, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
+      propertyPath: m_Radius
+      value: .639999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883012, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -567,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 111642, guid: b90c5a17db654344090c9b5c948e6036, type: 2}
   spawnValues: {x: 6, y: 11}
-  hazardCount: 100
+  hazardCount: 300
   spawnWait: 1
   startWait: 1
   minHorizontalSpeed: 1
@@ -599,7 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 100762, guid: 58914e71f58834443b57d3670214da02, type: 2}
   spawnValues: {x: 6, y: 11}
-  hazardCount: 150
+  hazardCount: 300
   spawnWait: 1
   startWait: 2
   minHorizontalSpeed: -2
@@ -619,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 142296, guid: 2a78e6897d35b1f4d98258520d29cd55, type: 2}
   spawnValues: {x: 6, y: 11}
-  hazardCount: 150
+  hazardCount: 300
   spawnWait: 1
   startWait: 1
   minHorizontalSpeed: -3

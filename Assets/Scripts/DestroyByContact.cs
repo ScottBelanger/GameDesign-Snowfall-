@@ -20,7 +20,7 @@ public class DestroyByContact : MonoBehaviour
         if (other.tag == "Snowflake")
         {
             Destroy(other.gameObject);
-            transform.localScale += new Vector3(0.1F, 0.1F, 0);
+            transform.localScale += new Vector3(0.017F, 0.017F, 0);
             score = score + 10;
             text.text = "Score: " + score;
         }
@@ -40,7 +40,8 @@ public class DestroyByContact : MonoBehaviour
                     break;
                 }
                 score = score - 10;
-                transform.localScale -= new Vector3(0.1F, 0.1F, 0);
+                text.text = "Score: " + score;
+                transform.localScale -= new Vector3(0.017F, 0.017F, 0);
                 Quaternion spawnRotation = Quaternion.identity;
                 Vector2 spawnPosition = new Vector2(transform.localPosition.x, transform.localPosition.y + 1);
                 GameObject environmentalHazard = (GameObject)Instantiate(snowflake, spawnPosition, spawnRotation);
