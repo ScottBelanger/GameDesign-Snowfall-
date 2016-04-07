@@ -31,8 +31,16 @@ public class DestroyByContact : MonoBehaviour
         }
         if (other.tag == "Hail")
         {
+            score = score - 50;
             Destroy(other.gameObject);
-
+            for (int i=0; i<5; i++)
+            {
+                if (score >= 0)
+                {
+                    break;
+                }
+                transform.localScale -= new Vector3(0.1F, 0.1F, 0);
+            }
         }
     }
 
@@ -43,7 +51,7 @@ public class DestroyByContact : MonoBehaviour
         ground.GetComponent<Rigidbody2D>().velocity = new Vector2(0, groundHorizantalSpeed + 3);
 
         GameObject background = GameObject.FindWithTag("Background");
-        float backgroundHorizantalSpeed = ground.GetComponent<Rigidbody2D>().velocity.y;
+        float backgroundHorizantalSpeed = background.GetComponent<Rigidbody2D>().velocity.y;
         background.GetComponent<Rigidbody2D>().velocity = new Vector2(0, backgroundHorizantalSpeed + 3);
 
         /*GameObject[] snowflakes = GameObject.FindGameObjectsWithTag("Snowflake");
