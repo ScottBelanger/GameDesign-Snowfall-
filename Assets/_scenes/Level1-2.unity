@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac41e71cafa12347ad69f2685507f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowflake: {fileID: 0}
 --- !u!1 &845243252
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac41e71cafa12347ad69f2685507f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowflake: {fileID: 0}
 --- !u!1 &1141459577
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +873,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 03e56e3ea8baade43a1ec60bd41c85aa, type: 2}
+  - {fileID: 2100000, guid: 635ceb7ee57e55b4bb7de8076da93423, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
