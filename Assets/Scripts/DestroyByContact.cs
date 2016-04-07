@@ -48,6 +48,12 @@ public class DestroyByContact : MonoBehaviour
                 StartCoroutine(releaseSnow(environmentalHazard));
             }
         }
+        if (other.tag == "Wind")
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(fallSlower());
+
+        }
     }
 
     IEnumerator releaseSnow(GameObject environmentalHazard)
@@ -81,6 +87,21 @@ public class DestroyByContact : MonoBehaviour
         }*/
 
         yield return new WaitForSeconds(1);
+        ground.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1); //1 is hardcoded. For now...
+        background.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1); ; //1 is hardcoded. For now...
+    }
+
+    IEnumerator fallSlower()
+    {
+        GameObject ground = GameObject.FindWithTag("Ground");
+        float groundHorizantalSpeed = ground.GetComponent<Rigidbody2D>().velocity.y;
+        ground.GetComponent<Rigidbody2D>().velocity = new Vector2(0, groundHorizantalSpeed - 4);
+
+        GameObject background = GameObject.FindWithTag("Background");
+        float backgroundHorizantalSpeed = background.GetComponent<Rigidbody2D>().velocity.y;
+        background.GetComponent<Rigidbody2D>().velocity = new Vector2(0, backgroundHorizantalSpeed - 4);
+
+        yield return new WaitForSeconds(1.5f);
         ground.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1); //1 is hardcoded. For now...
         background.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1); ; //1 is hardcoded. For now...
     }

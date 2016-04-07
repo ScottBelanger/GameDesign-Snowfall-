@@ -601,8 +601,8 @@ MonoBehaviour:
   startWait: 2
   minHorizontalSpeed: -3
   maxHorizontalSpeed: .5
-  minVerticalSpeed: -6
-  maxVerticalSpeed: -6
+  minVerticalSpeed: -4
+  maxVerticalSpeed: -5
 --- !u!1 &1153456246
 GameObject:
   m_ObjectHideFlags: 0
